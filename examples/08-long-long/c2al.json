@@ -1,0 +1,19 @@
+{
+  "name": "c2al example 08: long long",
+  "sources": ["longlong.c"],
+  "entry_points": ["factorial", "powmod", "is_prime_mr", "add_total", "low32"],
+  "object_id": 50108,
+  "object_name": "C2AL Long Long",
+  "out_al": "../bc-app/src/generated/LongLong.Codeunit.al",
+  "tests": [
+    {"call": "factorial", "args": [20], "expect": {"big": "2432902008176640000"}},
+    {"call": "powmod", "args": [2, 1000000, 1000000007], "expect": 235042059},
+    {"call": "is_prime_mr", "args": [2147483647], "expect": 1},
+    {"call": "is_prime_mr", "args": [2147483641], "expect": 0},
+    {"call": "is_prime_mr", "args": [999999937], "expect": 1},
+    {"call": "add_total", "args": [{"big": "9000000000"}], "expect": {"big": "9000000000"}},
+    {"call": "add_total", "args": [{"big": "-1"}], "expect": {"big": "8999999999"}},
+    {"call": "low32", "args": [{"big": "8589934597"}], "expect": 5},
+    {"call": "low32", "args": [{"big": "4294967295"}], "expect": -1}
+  ]
+}

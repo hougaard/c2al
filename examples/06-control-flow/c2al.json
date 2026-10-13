@@ -1,0 +1,21 @@
+{
+  "name": "c2al example 06: control flow",
+  "sources": ["control.c"],
+  "entry_points": ["vowel_count", "roman_to_int", "fallthrough", "sum_skipping", "find_pair", "short_circuit", "digits_reversed"],
+  "object_id": 50106,
+  "object_name": "C2AL Control Flow",
+  "out_al": "../bc-app/src/generated/ControlFlow.Codeunit.al",
+  "tests": [
+    {"call": "vowel_count", "args": [{"text": "Dynamics 365 Business Central"}], "expect": 8},
+    {"call": "roman_to_int", "args": [{"text": "MCMXCIV"}], "expect": 1994},
+    {"call": "roman_to_int", "args": [{"text": "MMXXVI"}], "expect": 2026},
+    {"call": "fallthrough", "args": [8], "expect": 1111},
+    {"call": "fallthrough", "args": [6], "expect": 11},
+    {"call": "fallthrough", "args": [-3], "expect": -1},
+    {"call": "sum_skipping", "args": [{"text": "1 2 3 -4 # 100"}], "expect": 9},
+    {"call": "find_pair", "args": [12], "expect": 34},
+    {"call": "find_pair", "args": [100], "expect": -1},
+    {"call": "short_circuit", "args": [], "expect": 906},
+    {"call": "digits_reversed", "args": [12345], "expect": 54321}
+  ]
+}

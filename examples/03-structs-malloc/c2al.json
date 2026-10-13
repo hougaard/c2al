@@ -1,0 +1,24 @@
+{
+  "name": "c2al example 03: structs and malloc",
+  "sources": ["structs.c"],
+  "entry_points": ["tree_add", "tree_size", "tree_height", "tree_print", "rect_demo", "union_demo", "sum_of_points"],
+  "object_id": 50103,
+  "object_name": "C2AL Structs",
+  "out_al": "../bc-app/src/generated/Structs.Codeunit.al",
+  "tests": [
+    {"call": "tree_add", "args": [50]},
+    {"call": "tree_add", "args": [30]},
+    {"call": "tree_add", "args": [70]},
+    {"call": "tree_add", "args": [20]},
+    {"call": "tree_add", "args": [40]},
+    {"call": "tree_add", "args": [30]},
+    {"call": "tree_add", "args": [-5]},
+    {"call": "tree_size", "args": [], "expect": 6},
+    {"call": "tree_height", "args": [], "expect": 4},
+    {"call": "tree_print", "args": [], "expect_log": "-5 20 30x2 40 50 70 "},
+    {"call": "rect_demo", "args": [], "expect": 15011},
+    {"call": "union_demo", "args": [16909060], "expect": 1034},
+    {"call": "union_demo", "args": [-1], "expect": 257805},
+    {"call": "sum_of_points", "args": [], "expect": 43}
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "b7c7140c-9fad-46aa-a460-197a50796add",
+  "name": "c2al Examples",
+  "publisher": "Hougaard",
+  "version": "1.0.0.0",
+  "brief": "C programs translated to AL by c2al, with a page that runs their tests.",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "29.0.0.0",
+  "idRanges": [
+    {
+      "from": 50100,
+      "to": 50149
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "18.0",
+  "features": [
+    "NoImplicitWith"
+  ]
+}

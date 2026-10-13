@@ -1,0 +1,22 @@
+{
+  "name": "c2al example 02: strings",
+  "sources": ["strings.c"],
+  "entry_points": ["reverse", "to_upper", "count_words", "is_palindrome", "int_to_text", "parse_int", "weekday", "greet", "compare"],
+  "object_id": 50102,
+  "object_name": "C2AL Strings",
+  "out_al": "../bc-app/src/generated/Strings.Codeunit.al",
+  "tests": [
+    {"call": "reverse", "args": [{"text": "Business Central"}], "expect": {"text": "lartneC ssenisuB"}},
+    {"call": "to_upper", "args": [{"text": "hello, al!"}], "expect": {"text": "HELLO, AL!"}},
+    {"call": "count_words", "args": [{"text": "  C code running   inside BC "}], "expect": 5},
+    {"call": "is_palindrome", "args": [{"text": "racecar"}], "expect": 1},
+    {"call": "is_palindrome", "args": [{"text": "codeunit"}], "expect": 0},
+    {"call": "int_to_text", "args": [-2147483648], "expect": {"text": "-2147483648"}},
+    {"call": "int_to_text", "args": [90210], "expect": {"text": "90210"}},
+    {"call": "parse_int", "args": [{"text": "  -1234xyz"}], "expect": -1234},
+    {"call": "weekday", "args": [9], "expect": {"text": "Wednesday"}},
+    {"call": "greet", "args": [{"text": "Erik"}], "expect": {"text": "Hello, Erik!"}},
+    {"call": "compare", "args": [{"text": "apple"}, {"text": "apricot"}], "expect": -1},
+    {"call": "compare", "args": [{"text": "same"}, {"text": "same"}], "expect": 0}
+  ]
+}

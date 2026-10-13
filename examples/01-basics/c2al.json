@@ -1,0 +1,26 @@
+{
+  "name": "c2al example 01: basics",
+  "sources": ["basics.c"],
+  "entry_points": ["fib", "fib_iter", "gcd", "is_prime", "collatz_steps", "push", "sum_history",
+                   "div_trunc", "mod_trunc", "narrow_char", "narrow_ushort"],
+  "object_id": 50101,
+  "object_name": "C2AL Basics",
+  "out_al": "../bc-app/src/generated/Basics.Codeunit.al",
+  "tests": [
+    {"call": "fib", "args": [20], "expect": 6765},
+    {"call": "fib_iter", "args": [45], "expect": 1134903170},
+    {"call": "gcd", "args": [1071, 462], "expect": 21},
+    {"call": "gcd", "args": [-48, 18], "expect": 6},
+    {"call": "is_prime", "args": [7919], "expect": 1},
+    {"call": "is_prime", "args": [7917], "expect": 0},
+    {"call": "collatz_steps", "args": [27], "expect": 111},
+    {"call": "push", "args": [5]},
+    {"call": "push", "args": [7]},
+    {"call": "push", "args": [-2]},
+    {"call": "sum_history", "args": [], "expect": 10},
+    {"call": "div_trunc", "args": [-7, 2], "expect": -3},
+    {"call": "mod_trunc", "args": [-7, 2], "expect": -1},
+    {"call": "narrow_char", "args": [200], "expect": -56},
+    {"call": "narrow_ushort", "args": [-1], "expect": 65535}
+  ]
+}

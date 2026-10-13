@@ -1,0 +1,20 @@
+{
+  "name": "c2al example 05: checksums",
+  "sources": ["checksums.c"],
+  "entry_points": ["crc32", "crc32_hex", "adler32_hex", "fnv1a_hex", "popcount", "rotl", "unsigned_less"],
+  "object_id": 50105,
+  "object_name": "C2AL Checksums",
+  "out_al": "../bc-app/src/generated/Checksums.Codeunit.al",
+  "tests": [
+    {"call": "crc32_hex", "args": [{"text": "123456789"}], "expect": {"text": "cbf43926"}},
+    {"call": "crc32_hex", "args": [{"text": "The quick brown fox jumps over the lazy dog"}], "expect": {"text": "414fa339"}},
+    {"call": "crc32", "args": [{"text": "123456789"}], "expect": -873187034},
+    {"call": "adler32_hex", "args": [{"text": "Wikipedia"}], "expect": {"text": "11e60398"}},
+    {"call": "fnv1a_hex", "args": [{"text": "hello"}], "expect": {"text": "4f9f2cab"}},
+    {"call": "popcount", "args": [-1], "expect": 32},
+    {"call": "popcount", "args": [1234567], "expect": 11},
+    {"call": "rotl", "args": [-2023406815, 8], "expect": 1698898311},
+    {"call": "unsigned_less", "args": [1, -1], "expect": 1},
+    {"call": "unsigned_less", "args": [-1, 1], "expect": 0}
+  ]
+}

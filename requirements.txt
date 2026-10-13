@@ -1,0 +1,2 @@
+pycparser>=2.21   # C parser (developed with 3.00)
+ziglang>=0.11     # clang as a pip package: preprocessing and native reference builds (developed with 0.16.0)

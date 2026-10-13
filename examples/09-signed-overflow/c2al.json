@@ -1,0 +1,16 @@
+{
+  "name": "c2al example 09: signed overflow",
+  "sources": ["overflow.c"],
+  "entry_points": ["java_hash", "lcg_next", "lcg_sequence", "plain_sum"],
+  "object_id": 50109,
+  "object_name": "C2AL Signed Overflow",
+  "out_al": "../bc-app/src/generated/SignedOverflow.Codeunit.al",
+  "wrap_all_signed": true,
+  "tests": [
+    {"call": "java_hash", "args": [{"text": "hello world"}], "expect": 1794106052},
+    {"call": "java_hash", "args": [{"text": "Business Central"}], "expect": 1855087893},
+    {"call": "lcg_next", "args": [], "expect": 16838},
+    {"call": "lcg_sequence", "args": [10], "expect": 137629},
+    {"call": "plain_sum", "args": [1000], "expect": 500500}
+  ]
+}

@@ -1,0 +1,28 @@
+__pycache__/
+*.pyc
+
+# build outputs
+build/
+dbuild/
+*.app
+*.exe
+*.pdb
+*.ilk
+
+# examples: generated AL is committed on purpose (examples/bc-app/src/generated)
+examples/bc-app/.alpackages/
+examples/bc-app/.snapshots/
+examples/bc-app/.vscode/launch.json
+
+# DOOM project: generated or large inputs
+projects/doom/doom1.wad
+projects/doom/doom_patched.h
+projects/doom/doom_debug.h
+projects/doom/dbg_glue.c
+projects/doom/glue.i
+projects/doom/dbg.i
+projects/doom/script.txt
+projects/doom/*.raw
+projects/doom/*.png
+projects/doom/ref_out.txt
+projects/doom/out.al

@@ -1,0 +1,14 @@
+{
+  "name": "c2al example 07: SHA-256",
+  "header": ["SHA-256 based on the public domain implementation by Brad Conte (github.com/B-Con/crypto-algorithms)."],
+  "sources": ["sha256.c"],
+  "entry_points": ["sha256_hex"],
+  "object_id": 50107,
+  "object_name": "C2AL SHA256",
+  "out_al": "../bc-app/src/generated/Sha256.Codeunit.al",
+  "tests": [
+    {"call": "sha256_hex", "args": [{"text": ""}], "expect": {"text": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"}},
+    {"call": "sha256_hex", "args": [{"text": "abc"}], "expect": {"text": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"}},
+    {"call": "sha256_hex", "args": [{"text": "abcdbcdecdefdefgefghfghighijhijkijkljklmklmnlmnomnopnopq"}], "expect": {"text": "248d6a61d20638b8e5c026930c3e6039a33ce45964ff2167f6ecedd419db06c1"}}
+  ]
+}
